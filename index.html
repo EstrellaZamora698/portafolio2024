@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <!-- Animaciones CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Estrella Zamora | Portafolio Web</title>
+</head>
+<body>
+    <!--Barra de Navegación-->
+    <nav>
+        <h1>Estrella Zamora</h1>
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+
+    <!--Sección Hero-->
+    <section class="hero" id="about">
+        <img src="images/woman.jpeg" alt="women" class="hero-img" Loading="lazy">
+        <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-tittle">About me</h2>
+            <p class="bio-text">Soy estudiante de la Lic. en Químico Farmacobiológo. Soy una persona comprometida, responsable, puntual y perfeccionista, siempre buscando la excelencia en mis proyectos y estudios.</p>
+        </div>
+    </section>
+
+    <!--About me-->
+    <section class="more-about">
+        <h2>More About Me</h2>
+        <p>Naci en la ciudad de Zacapoaxtla el 11 de julio de 2003, y actualmente resido en la ciudad de Puebla. Desde siempre me ha interesado la ciencia y esto a definido que haya elegido estudiar la carrera de Lic. en QFB</p>
+        <p>Ademas de estudiar una carrera universitaria tengo interes por el Marketing Digital y la Programación, además del deporte. En mi tiempo libre disfruto de visitar a mi familia y pasar tiempo con muñeco (mi gato), estar con el es una sensación increible. A lo largo de mi vida he aprendido tantas cosas, pero lo que más he entendido es que la vida es una montaña rusa, está llena de altas, bajas, personas, experiencias, situaciones, lugares, palabras, acciones, sentimientos, emociones y demás.</p>
+        <p>Estoy emocionada por las oportunidades de seguir creciendo y aprendiendo.</p>
+    </section>
+
+    <!--Skills-->
+    <section class="skills" id="skills">
+        <h2 class="skill-header">My Top Skills</h2>
+            <div class="skills-wrapper">
+                <div class="first-set animate__animated animate__pulse">
+                    <img src="images/icons8-html-5.svg" alt="HTML5" loading="lazy" class="icon icon-card">
+                    <img src="images/icons8-css3.svg" alt="CSS3" loading="lazy" class=" icon icon-card">
+                    <img src="images/icons8-javascript.svg" alt="JavaScript" loading="lazy" class="icon icon-card">
+                </div>
+                <div class="second-set animate__animated animate__pulse">
+                    <img src="images/icons8-bootstrap.svg" alt="Bootstrap" loading="lazy" class="icon icon-card">
+                    <img src="images/icons8-github-50.svg" alt="Git" loading="lazy" class="icon icon-card">
+                    <img src="images/icons8-react-native.svg" alt="React" loading="lazy" class="icon icon-card">
+                </div>
+            </div>
+    </section>
+
+    <!--Projects-->
+    <section class="projects" id="projects">
+        <h2 class="projects-title">Some of my Recent Projects</h2>
+        <div class="projects-container">
+            <div class="project-container project-card">
+                <img src="images/vistaprevia.png" alt="" loading="lazy" class="project-pic">
+                <h3 class="proyect title">Pinterest clone</h3>
+                <p class="project-details">This project is a clone of the Pinterest home interface, created purely with HTML5 and CSS3.</p>
+                <a href="#" target="_blank" class="project-link">Check it out!</a>
+            </div>
+
+            <div class="project-container project-card">
+                <img src="images/project2.jpg" alt="" loading="lazy" class="project-pic">
+                <h3 class="proyect title">Project 2</h3>
+                <p class="project-details">Work in Progress.... </p>
+                <a href="#" target="_blank" class="project-link">Stay tuned!</a>
+            </div>
+
+            <div class="project-container project-card">
+                <img src="images/project3.jpg" alt="" loading="lazy" class="project-pic">
+                <h3 class="proyect title">Project 3</h3>
+                <p class="project-details">Work in progress.... </p>
+                <a href="#" target="_blank" class="project-link">Stay tuned!</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Redes Sociales-->
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/estrella-zamora-beza/" target="_blank"><img src="icons/linkin.png" alt="LinkedIn" loading="lazy" class="socicon animate__animated animate__bounce"></a>
+
+        <a href="https://github.com/EstrellaZamora698" target="_blank"><img src="icons/github.png" alt="GitHub" loading="lazy" class="socicon animate__animated animate__bounce "></a>
+
+        <a href="https://www.instagram.com/estrellazamber/" target="_blank"><img src="icons/insta.png" alt="Instagram" loading="lazy" class="socicon animate__animated animate__bounce"></a>
+
+        <a href="https://www.facebook.com/samberlindsey.venegas?locale=es_LA" target="_blank"><img src="icons/facebook.png" alt="Facebook" loading="lazy" class="socicon animate__animated animate__bounce"></a>
+    </div>
+
+    <!--Scroll button-->
+    <i class="scroll-up" id="scroll-up">
+        <img src="icons/descarga.gif" class="socicon up-arrow" alt="scroll up">
+    </i>
+
+    <!--Footer-->
+    <footer>
+        <p>Built with {💗} by <a href="https://www.linkedin.com/in/estrella-zamora-beza/" target="_blank"> Estrella Zamora</a>🌻✨</p>
+    </footer>
+
+
+    <!--JavaScript link-->
+    <script src="app.js"></script>
+
+
+
+
+
+           <!--Ion icons scripts -->
+     <script
+     type="module"
+     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+   ></script>
+   <script
+     nomodule
+     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+   ></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/*Variables*/
+
+:root {
+    --font-family: "Roboto", sans-serif; /*Es la familia de fuente que se va a utilizar*/
+    --normal-font: 400; /*Es el grosor de la fuente*/
+    --bold-font: 700; /*Define el grosor del texto en negrita*/
+    --bolder-font: 900; /*Define el grosor aun mayor*/
+    --bg-color: #fcfcfc; /*Define el color de fondo de la pagina*/
+    --primary-color: #4756df;/*Define el color principal de la pagina*/
+    --secondary-color: #ff7235; /*Es para el color secundario de la pagina*/
+    --primary-shadow: #8b8eaf; /*Define el color de la sombra principal*/
+    --secondary-shadow: #a17a69; /*Define el color de la sombra secundaria*/
+    --bottom-margin: 0.5rem; /*Define el margen inferior del texto*/
+    --bottom-margin-2: 1rem;/*Es par definir un margen inferior aun mas grande*/
+    --line-height: 1.7rem; /*Define la altura de la linea para el texto*/
+    --transition: 0.3s; /*Es para la duracion de transiciones*/
+}
+/*Fin de las variables*/
+
+html{
+    scroll-behavior: smooth; /*Esta es una regla en CSS que cambia la manera en que la página se desplaza (scroll) cuando haces clic en un enlace que te lleva a otra parte de la misma página.*/
+}
+/*El valor smooth en la propiedad scroll-behavior se utiliza para hacer que el desplazamiento sea suave y gradual en lugar de inmediato. */
+
+/*CSS Resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*El margin y el padding sirven para los margenes y los rellenos es decir para acomodar y evitar que se queden espacios no deseados. 
+    El box-sizing: border-box; hace que el tamaño total de un elemento sea la suma del ancho y alto del contenido, más el relleno y el borde, en lugar de aumentar cuando se agrega relleno o borde.*/
+}
+
+ul{
+    list-style: none;
+    /*list-style: none; elimina los marcadores predeterminados de las listas desordenadas (<ul>), lo que significa que los elementos de lista no tendrán puntos o números antes de ellos.*/
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+    /*text-decoration: none; elimina el subrayado predeterminado de los enlaces.
+color: var(--primary-color); establece el color de los enlaces en el color primario definido por la variable --primary-color.*/
+}
+
+a:hover{
+    color: var(--secondary-color);
+    /*
+a:hover aplica estilos cuando el cursor se sitúa sobre un enlace.
+color: var(--secondary-color); cambia el color del texto del enlace al color secundario cuando se pasa el cursor sobre él.
+border-bottom: 2px solid var(--secondary-color); agrega un borde inferior de 2px sólido con el color secundario cuando se pasa el cursor sobre el enlace.*/
+}
+
+body{
+    font-family: var(--font-family);
+    /*font-family: var(--font-family); establece la familia de fuentes para todo el contenido del cuerpo del documento, utilizando la variable --font-family definida previamente.*/
+}
+
+/*NavBar*/
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+    /*position: sticky;: Hace que el navbar se pegue (quede fijo) en la parte superior de la ventana cuando el usuario se desplaza hacia abajo.
+top: 0; left: 0;: Coloca el navbar en la esquina superior izquierda de su contenedor.
+z-index: 1;: Establece una capa z para asegurarse de que el navbar esté por encima de otros elementos que puedan estar en la página.
+display: flex;: Usa el modelo de caja flexible para organizar los elementos hijos del navbar.
+align-items: center; y justify-content: space-between;: Centra verticalmente los elementos y distribuye el espacio entre los elementos, respectivamente, para una disposición equilibrada.
+padding: 1.5rem 3.5rem;: Añade relleno alrededor del contenido del navbar para espaciarlo del borde.
+background-color: var(--bg-color);: Establece el color de fondo del navbar utilizando una variable CSS llamada --bg-color.
+box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);: Aplica una sombra sutil debajo del navbar para darle profundidad y separarlo visualmente del resto de la página.*/ 
+}
+
+nav h1{
+    color: var(--primary-color)
+    /*color: var(--primary-color);: Define el color del texto del título del navbar utilizando una variable CSS llamada --primary-color.*/
+}
+
+nav a{
+    color: var(--primary-color);
+    transition: var(--transition);
+    /*color: var(--primary-color);: Establece el color predeterminado de los enlaces del navbar utilizando la variable --primary-color.
+transition: var(--transition);: Aplica una transición suave (definida por la variable --transition) cuando el color de los enlaces cambia debido al hover.
+:hover: Define los estilos cuando el cursor está sobre los enlaces del navbar.
+color: var(--secondary-color);: Cambia el color del texto del enlace a --secondary-color cuando se pasa el cursor sobre él.
+border-bottom: 2px solid var(--secondary-color);: Añade un borde inferior sólido de 2px en --secondary-color al enlace cuando se pasa el cursor sobre él, lo que proporciona un indicador visual de estado activo.*/
+}
+
+nav a:hover{ /*Este selector aplica estilos a los enlaces (<a>) dentro de un elemento de navegación (<nav>) cuando el usuario pasa el cursor sobre ellos.*/
+    color: var(--secondary-color); /*Cambia el color del texto del enlace. El uso de var(--secondary-color) permite que el color del enlace cambie de acuerdo con una variable CSS personalizada. Esto asegura la consistencia en el esquema de colores del sitio. Al cambiar el color del enlace en el estado hover, se proporciona una retroalimentación visual al usuario indicando que el enlace es interactivo.*/
+    border-bottom: 2px solid var(--secondary-color); /*Añade un borde inferior al enlace. Al agregar un borde inferior de 2 píxeles de grosor y color var(--secondary-color), se refuerza la retroalimentación visual del estado hover. Esto no solo destaca el enlace como interactivo, sino que también puede mejorar la estética del diseño del menú de navegación.*/
+}
+
+nav ul{ /*Este selector aplica estilos a la lista no ordenada (<ul>) dentro de un elemento de navegación (<nav>).*/
+    display: flex; /*Organiza los elementos de la lista (items del navbar) en una fila usando el modelo de caja flexible.*/
+    gap: 1.9rem; /*Define el peso de la fuente de los elementos de la lista utilizando la variable --bold-font*/
+}
+
+nav ul li{
+    font-weight: var(--bold-font);
+   /*Define el peso de la fuente de los elementos de la lista utilizando la variable --bold-font*/
+}
+
+/*Esconder botón de hamburguesa*/
+
+.burger-menu{
+    color: var(--primary-color); /*Establece el color del texto del menú de hamburguesa utilizando una variable CSS personalizada llamada --primary-color*/
+    font-size: 2rem; /*Establece el tamaño de la fuente en 2 rem.*/
+    border: 0; /*Elimina cualquier borde del elemento.*/
+    background-color: transparent; /* Establece el color de fondo del elemento como transparente. Esto permite que cualquier contenido o color de fondo detrás del menú de hamburguesa sea visible, asegurando que el botón no tenga un color de fondo propio.*/
+    cursor: pointer; /*Cambia el cursor a una mano cuando el usuario pasa el ratón sobre el elemento, esto indica al usuario que el elemento es interactivo y se puede hacer clic en él.*/
+    display: none; /*Oculta el elemento, de modo que no se muestra en la página. Es común que el menú de hamburguesa esté oculto por defecto y se muestre solo en ciertas condiciones, como en pantallas más pequeñas (responsive design).*/
+}
+
+/*Fin de la barra de navegación (NavBar)*/
+
+/*Inicio de Hero*/
+.hero { /*Esta sección suele estar ubicada en la parte superior de la página y se utiliza para captar la atención de los visitantes con contenido impactante y visualmente atractivo.*/
+    display: flex; /*Establece un contenedor flexible (flexbox) para el elemento. Utilizar flexbox permite un diseño flexible y adaptable para los elementos hijos dentro del contenedor .hero, facilitando el alineamiento y distribución de los mismos.*/
+    align-items: center; /*Alinea los elementos hijos en el centro del eje transversal (vertical por defecto) del contenedor flex. Asegura que los elementos hijos estén centrados verticalmente dentro del contenedor .hero, creando una apariencia más equilibrada y centrada.*/
+    justify-content: center; /*Centra los elementos hijos a lo largo del eje principal (horizontal por defecto) del contenedor flex.*/
+    gap: 0rem; /*Establece un espacio (gap) de 0 rem entre los elementos hijos del contenedor flex. Indica que no habrá espacio adicional entre los elementos hijos. Esto puede cambiarse si se necesita más adelante, pero por defecto se asegura de que los elementos estén pegados entre sí.*/
+    max-width: 78.75rem; /* Establece un ancho máximo de 78.75 rem para el contenedor.
+    Por qué: Limita el ancho máximo del contenedor .hero para asegurarse de que no se expanda demasiado en pantallas grandes, manteniendo un diseño más controlado y legible. 78.75rem equivale aproximadamente a 1260 píxeles (asumiendo que 1rem = 16px).*/
+    margin: auto; /*Establece márgenes automáticos en todos los lados del contenedor.
+    */
+}
+
+.hero img{
+    height: 25rem; /*Establece la altura de la imagen en 25 rem. Utilizar rem hace que el tamaño de la imagen sea proporcional al tamaño de la fuente raíz, asegurando consistencia en diferentes dispositivos y configuraciones de usuario.*/
+    width: 22rem; /*Establece el ancho de la imagen en 22 rem.*/
+}
+
+.bio{
+    width: 24rem; /*Establece el ancho del contenedor en 24 rem.*/
+    padding: 0.625rem; /*Añade un relleno interno de 0.625 rem alrededor del contenido. El relleno crea un espacio entre el contenido y el borde del contenedor, mejorando la legibilidad y el diseño.*/
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow); /*Aplica una sombra al contenedor. La sombra añade profundidad y destaca el contenedor. El uso de la variable var(--primary-shadow) asegura que la sombra sea consistente con el tema del sitio.*/
+    border-radius: 8px; /*Redondea las esquinas del contenedor con un radio de 8 píxeles*/
+}
+
+.bio h1{
+    margin-bottom: var(--bottom-margin); /*Añade un margen inferior al encabezado. Utilizar la variable var(--bottom-margin) asegura que el espaciado sea consistente con otros elementos del sitio.*/
+}
+
+.bio p{
+    line-height: var(--line-height); /*Establece la altura de la línea para los párrafos. Utilizar var(--line-height) asegura que la separación entre líneas sea consistente, mejorando la legibilidad.*/
+    padding: 0.3rem 0; /*Añade un relleno vertical de 0.3 rem. Crea espacio vertical entre los párrafos y otros elementos, mejorando la disposición del texto.*/
+}
+
+/*About me*/
+.more-about{
+    background-color: var(--bg-color); /*Establece el color de fondo utilizando una variable CSS.*/
+    padding: 1rem 6rem; /*Añade un relleno de 1 rem vertical y 6 rem horizontal.*/
+}
+
+.more-about h2{
+    margin-bottom: var(--bottom-margin); /*Añade un margen inferior al encabezado.*/
+    text-align: center; /*Centra el texto del encabezado.*/
+}
+
+.more-about p{
+    line-height: var(--line-height); /*Establece la altura de la línea para los párrafos. Utilizar var(--line-height) asegura que la separación entre líneas sea consistente, mejorando la legibilidad.*/
+    padding: 0.4rem; /* Añade un relleno alrededor del párrafo. El relleno crea un espacio adecuado alrededor del texto, mejorando la apariencia y la legibilidad.*/
+    text-align: center; /*Centra el texto de los párrafos.*/
+}
+
+
+
+/*Skill section*/
+.skills{
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.skill-header{
+    margin-bottom: 1rem;
+}
+.skills-wrapper img{
+    padding: 1.25rem;
+}
+
+.icon{
+    width: 11.875rem;
+    height: 11.25rem;
+}
+
+.icon-card{
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    border-radius: 11px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Project Section*/
+.projects{
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+
+.project-pic{
+    width: 65%;
+    height: 60%;
+
+}
+
+.projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container{
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.projects-container p{
+    padding: 0.4rem;
+}
+
+.project-title{
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details{
+    margin-bottom: var(--bottom-margin);
+}
+
+
+.project-card{
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow:0 3px 10px var(--primary-color);
+    padding: 20px;
+    margin: 10px;
+
+    
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+}
+
+.socicon{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+footer{
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
+
+/*Scroll button*/
+
+.scroll-up{
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow{
+    width: 3rem;
+    height: 3rem;
+}
+
+/*Media queries for responsiveness*/
+@media screen and (max-width: 720px){
+    nav{
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul{
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li{
+        margin: 8px;
+    }
+
+    .burger-menu{
+        display: block;
+    }
+
+    nav ul.show{
+        transform: translateX(0);
+    }
+
+    .hero{
+        margin-top: -1rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img{
+        height: 27.5rem;
+        width: 20rem;
+    }
+
+    .bio{
+        margin-top: 2rem;
+        width: 20.5rem;
+    }
+
+    .more-about{
+        margin-top: 2rem;
+        padding: 1rem 3.5rem;
+    }
+
+    .more-about h2{
+        text-align: center;
+    }
+
+    .more-about p{
+        text-align: justify;
+    }
+
+    .icon{
+        width: 5.875rem;
+        height: 5.25rem;
+    }
+
+    .projects-container{
+        flex-direction: column;
+    }
+
+    .project-container{
+        width: 20.875rem;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+    .hero img{
+        height: 17.5rem;
+        width: 10rem;
+    }
+    
+    .bio{
+        width: 18.3rem;
+    }
+
+    .project-container{
+        width: 17.875rem;
+    }
+}
+
