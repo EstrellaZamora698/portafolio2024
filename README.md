@@ -14,3 +14,4 @@ Portafolio 2024 de proyectos, realizado en Tecnolochicas PRO. Creado con HTML5, 
 
 
 ### Contacto
+👩‍🔬🧫Estrella Zamora: [Mi LinkedIn](www.linkedin.com/in/estrella-zamora-beza)
